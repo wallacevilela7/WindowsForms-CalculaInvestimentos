@@ -1,0 +1,18 @@
+Calcular juros compostos
+
+Crie um programa para o cálculo dos ganhos com aplicações. Para o cálculo necessitamos saber o período (em anos) da
+aplicação, o valor dos juros mensais e a quantidade que é depositada mensalmente na aplicação. Como funciona a fórmula
+de juros compostos?
+
+ - Juros Compostos ou simplesmente juros sobre juros é calculado utilizando a seguinte fórmula: A = P ( L + i) ^ t;
+
+ Para entender melhor a fórmula segue a explicação de cada variável: 
+ A = valor final, ou seja, o resultado que você terá;
+ P = valor inicial depositado;
+ i = taxa de juros;
+ t = tempo de investimento;
+
+ É importante lembrar que a taxa de juros e o tempo devem estar na mesma unidade.
+
+ Por exemplo, quem quer simular um investimento que rende 0,5% ao mês deve utilizar os períodos também em base 
+ mensais, isto é, colocar o número de meses, não o de anos, no campo t;
