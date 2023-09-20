@@ -16,23 +16,39 @@ namespace CalculaJuros
         {
             try
             {
-
                 periodoAnos = int.Parse(txtPeriodo.Text);
                 taxaJuros = double.Parse(txtTaxaJuros.Text);
                 valorAplicado = double.Parse(txtValorAplicado.Text);
 
                 periodoMeses = periodoAnos * 12;
 
-                double valorBase = 1 + taxaJuros;
-                double valorExpoente = Math.Pow(1 + taxaJuros, periodoMeses);
+                //double valorBase = 1 + taxaJuros;
+                //double valorExpoente = Math.Pow(1 + taxaJuros, periodoMeses);
 
-                result = valorAplicado * valorExpoente;
-                txtResult.Text = $"{result}";
+                //result = valorAplicado * valorExpoente;
+
+
+                result = valorAplicado * Math.Pow(1 + taxaJuros, periodoAnos);
+
+                txtResult.Text = $"R$ {result.ToString("F2")}";
             }
             catch (Exception ex)
             {
-                txtResult.Text = ex.Message;    
+                txtResult.Text = ex.Message;
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtResult.Text = "";
+            txtValorAplicado.Text = "";
+            txtTaxaJuros.Text = "";
+            txtPeriodo.Text = "";
+            result = 0;
+            periodoMeses = 0;
+            periodoAnos = 0;
+            valorAplicado = 0;
+            taxaJuros = 0;
         }
     }
 }
