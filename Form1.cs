@@ -22,12 +22,6 @@ namespace CalculaJuros
 
                 periodoMeses = periodoAnos * 12;
 
-                //double valorBase = 1 + taxaJuros;
-                //double valorExpoente = Math.Pow(1 + taxaJuros, periodoMeses);
-
-                //result = valorAplicado * valorExpoente;
-
-
                 result = valorAplicado * Math.Pow(1 + taxaJuros, periodoAnos);
 
                 txtResult.Text = $"R$ {result.ToString("F2")}";
